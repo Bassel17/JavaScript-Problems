@@ -1,10 +1,10 @@
-function reverseString(str) {
-    let arrayOfString = [...str];
-    let newArray = [];
-    arrayOfString.forEach((character)=>newArray.unshift(character));
-    str="";
-    newArray.forEach((character)=> str += character);
-    return str;
+function reverseString(string) {
+    const arrayOfString = [...string];
+    const reversedArrayOfString = [];
+    arrayOfString.forEach((character)=>reversedArrayOfString.unshift(character));
+    string="";
+    reversedArrayOfString.forEach((character)=> string += character);
+    return string;
   }
   
   console.log(reverseString("bassel")); 
