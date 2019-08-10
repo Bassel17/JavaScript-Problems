@@ -1,10 +1,10 @@
 function findLongestWordLength(str) {
     const Array = [...str];
-    const Maximum = longestWordOf(Array);
+    const Maximum = longestWordLengthOf(Array);
     return Maximum;
 }
 
-function longestWordOf(Array) {
+function longestWordLenghtOf(Array) {
     Array.push(' ');
     let counter = 0;
     let maximum = 0;
