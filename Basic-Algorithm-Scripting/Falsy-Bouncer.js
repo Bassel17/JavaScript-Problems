@@ -1,10 +1,12 @@
 function bouncer(arr) {
-    const arrayWithNoFalsyValues=arr.filter((value)=>{
-        if(value){
-            return value;
-        } 
-    })
+    const arrayWithNoFalsyValues=arr.filter(CheckForNonFalsy)
     return arrayWithNoFalsyValues;
+}
+
+function CheckForNonFalsy(value){
+    if(value){
+        return value;
+    }
 }
 
 //Example:
