@@ -1,16 +1,18 @@
 function diffArray(arr1, arr2) {
-    var newArr = [];
+    const newArr = [];
     arr1.forEach(element => {
-        if(arr2.indexOf(element) === -1){
-            newArr.push(element);
-        }
+        addIfNotInArray(element,arr2,newArr);
     });
     arr2.forEach(element => {
-        if(arr1.indexOf(element) === -1){
-            newArr.push(element);
-        }
-    })
+        addIfNotInArray(element,arr1,newArr);
+    });
     return newArr;
 }
-  
+
+function addIfNotInArray(element,array,newArray){
+    if(array.indexOf(element) === -1){
+        newArray.push(element);
+    }
+}
+//Example:
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
