@@ -1,12 +1,9 @@
 function sumAll(range) {
+    range.sort((a,b)=>a-b);
     let sum = 0;
-    let firstElement = range[0];
-    let lastElement = range[1];
-    if(range[0]>range[1]){
-        firstElement = range[1];
-        lastElement = range[0];
-    }
-    for (let i=firstElement ; i<=lastElement ; i++){
+    const Minimum = range[0];
+    const Maximum = range[1];
+    for (let i=Minimum ; i<=Maximum ; i++){
         sum += i;
     }
     return sum;
