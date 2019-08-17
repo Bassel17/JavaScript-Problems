@@ -15,5 +15,5 @@ function whatIsInAName(collection, source) {
     console.log(arr);
     return arr;
 }
-  
+//Example:
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
