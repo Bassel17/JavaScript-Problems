@@ -7,12 +7,16 @@ function translatePigLatin(str) {
         return str.concat('way');
     }
     let arrayOfCharacters = str.split('');
-    for (let i=0; i<arrayOfCharacters.length; i++){
+    let i;
+    for (i=0; i<arrayOfCharacters.length; i++){
         if(arrayOfVowels.includes(arrayOfCharacters[i])){
             stringToAdd = str.slice(0,i);
             baseString = str.slice(i);
             break;
         }
+    }
+    if(i===arrayOfCharacters.length){
+        return str.concat('ay');
     }
     return baseString.concat(stringToAdd,'ay');
 }
