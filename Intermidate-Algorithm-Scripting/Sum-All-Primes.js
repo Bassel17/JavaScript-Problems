@@ -12,7 +12,7 @@ function returnArrayOfPrimeNumbers(num){
     const arrayOfPrimeNumbers = [];
     for (let i=2 ; i<=num ; i++){
         counter = 0
-        for (let j =2; j<num ; j++){
+        for (let j =2; j<=num ; j++){
             if((i !== j) && (i % j === 0)){
                 counter ++;
             }
