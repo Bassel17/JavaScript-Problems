@@ -1,9 +1,18 @@
+function addAllPrimeNumbersTill(num){
+    let sumOfPrimeNumbers = 0;
+    const arrayOfPrimeNumbers = returnArrayOfPrimeNumbers(num);
+    arrayOfPrimeNumbers.forEach(primeNumber => {
+        sumOfPrimeNumbers += primeNumber;
+    });
+    return sumOfPrimeNumbers;
+}
+
 function returnArrayOfPrimeNumbers(num){
     let counter = 0;
     const arrayOfPrimeNumbers = [];
-    for (i=2 ; i<num ; i++){
+    for (let i=2 ; i<=num ; i++){
         counter = 0
-        for (j =2; j<num ; j++){
+        for (let j =2; j<num ; j++){
             if((i !== j) && (i % j === 0)){
                 counter ++;
             }
@@ -15,4 +24,4 @@ function returnArrayOfPrimeNumbers(num){
     return arrayOfPrimeNumbers;
 }
 
-console.log(returnArrayOfPrimeNumbers(250));
+console.log(addAllPrimeNumbersTill(977));
