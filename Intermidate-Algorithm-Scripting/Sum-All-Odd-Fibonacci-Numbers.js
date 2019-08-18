@@ -1,3 +1,10 @@
+function isOdd (num){
+    if(num % 2 === 0){
+        return false;
+    }
+    return true;
+}
+
 function fibonacciSeries(limit){
     let currentNumber = 1;
     let nextNumber = 1;
