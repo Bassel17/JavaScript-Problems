@@ -1,3 +1,21 @@
+
+function sumOfOddFabonacciNumbers(num){
+    const arrayOfFibonacciNumbers = fibonacciSeries(num);
+    let sumOfOddFabonacciNumbers = 0;
+    arrayOfFibonacciNumbersLessThanNum = []
+    arrayOfFibonacciNumbers.forEach(number => {
+        if(number<num){
+            arrayOfFibonacciNumbersLessThanNum.push(number);
+        }
+    });
+    arrayOfFibonacciNumbersLessThanNum.forEach(number => {
+        if(isOdd(number)){
+            sumOfOddFabonacciNumbers += number;
+        }
+    })
+    return sumOfOddFabonacciNumbers;
+}
+
 function isOdd (num){
     if(num % 2 === 0){
         return false;
@@ -19,5 +37,5 @@ function fibonacciSeries(limit){
     return arrayOfFibonacciNumbers;
 }
 
-
-console.log(fibonacciSeries(4));
+//Example:
+console.log(sumOfOddFabonacciNumbers(4));
