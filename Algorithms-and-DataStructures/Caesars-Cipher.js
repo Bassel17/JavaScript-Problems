@@ -15,8 +15,7 @@ function decipherRot13Word(arrayOfDechiperedWords) {
                 let unicode = word.charCodeAt(i);
                 unicode += 13;
                 arrayOfCharacter[i] = String.fromCharCode(unicode);
-            }
-            else {
+            }else{
                 if (character.match(/[N-Z]/)) {
                     let unicode = word.charCodeAt(i);
                     unicode -= 13;
